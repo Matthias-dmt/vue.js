@@ -22,7 +22,6 @@
         </label>
 
         <!-- list tasks display -->
-        <transition name="list-tasks-anim" tag="div"> </transition>
         <ul>
           <!-- task display -->
           <transition-group name="task-anim" tag="div">
@@ -72,55 +71,53 @@
         </ul>
       </main>
 
-      <transition name="footer-anim" tag="div">
-        <footer v-if="hasTask" class="bg-white flex px-3 py-2">
-          <!-- task remaining display -->
-          <span class="w-4/12 text-center">
-            <strong>{{ remaining }}</strong> remaining tasks
-          </span>
+      <footer v-if="hasTask" class="bg-white flex px-3 py-2">
+        <!-- task remaining display -->
+        <span class="w-4/12 text-center">
+          <strong>{{ remaining }}</strong> remaining tasks
+        </span>
 
-          <!-- actions list display -->
-          <ul class="flex space-x-3 w-4/12">
-            <li
-              class="w-4/12 p-1 text-center"
-              :class="{ 'border rounded-lg border-gray-400': filter === 'all' }"
-            >
-              <a href="#" @click.prevent="filter = 'all'">
-                All
-              </a>
-            </li>
-            <li
-              class="w-4/12 p-1 text-center"
-              :class="{
-                'border rounded-lg border-gray-400': filter === 'todo',
-              }"
-            >
-              <a href="#" @click.prevent="filter = 'todo'">
-                to do
-              </a>
-            </li>
-            <li
-              class="w-4/12 p-1 text-center"
-              :class="{
-                'border rounded-lg border-gray-400': filter === 'completed',
-              }"
-            >
-              <a href="#" @click.prevent="filter = 'completed'">
-                completed
-              </a>
-            </li>
-          </ul>
-
-          <!-- button delete all display -->
-          <button
-            v-show="taskDone"
-            @click.prevent="deleteCompleted"
-            class="text-center w-4/12"
+        <!-- actions list display -->
+        <ul class="flex space-x-3 w-4/12">
+          <li
+            class="w-4/12 p-1 text-center"
+            :class="{ 'border rounded-lg border-gray-400': filter === 'all' }"
           >
-            Delete all tasks done
-          </button>
-        </footer>
-      </transition>
+            <a href="#" @click.prevent="filter = 'all'">
+              All
+            </a>
+          </li>
+          <li
+            class="w-4/12 p-1 text-center"
+            :class="{
+              'border rounded-lg border-gray-400': filter === 'todo',
+            }"
+          >
+            <a href="#" @click.prevent="filter = 'todo'">
+              to do
+            </a>
+          </li>
+          <li
+            class="w-4/12 p-1 text-center"
+            :class="{
+              'border rounded-lg border-gray-400': filter === 'completed',
+            }"
+          >
+            <a href="#" @click.prevent="filter = 'completed'">
+              completed
+            </a>
+          </li>
+        </ul>
+
+        <!-- button delete all display -->
+        <button
+          v-show="taskDone"
+          @click.prevent="deleteCompleted"
+          class="text-center w-4/12"
+        >
+          Delete all tasks done
+        </button>
+      </footer>
     </div>
   </section>
 </template>
@@ -256,37 +253,5 @@ export default {
   opacity: 0;
 
   transform: translateY(-10px);
-}
-
-.footer-anim-enter-active,
-.footer-anim-leave-active {
-  transition: 1.3s;
-  height: auto;
-}
-
-.footer-anim-enter {
-  opacity: 0;
-  height: 0;
-}
-
-.footer-anim-leave-to {
-  opacity: 0;
-  height: 0;
-}
-
-.list-tasks-anim-enter-active,
-.list-tasks-anim-leave-active {
-  transition: 1.3s;
-  height: auto;
-}
-
-.list-tasks-anim-enter {
-  opacity: 0;
-  height: 0;
-}
-
-.list-tasks-anim-leave-to {
-  opacity: 0;
-  height: 0;
 }
 </style>
