@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.usage-enter-active {
+  transition: 1.3s cubic-bezier(0.23, 0.66, 0.08, 0.93);
+  transform: translateX(0px);
+}
+
+.usage-leave-active {
+  transition: opacity 1.3s cubic-bezier(0.23, 0.66, 0.08, 0.93) height 2s;
+}
+
+.usage-enter {
+  opacity: 0;
+  transform: translateX(400px);
+}
+
+.usage-leave-to {
+  height: 0;
+  opacity: 0;
+
+  transform: translateY(-10px);
+}

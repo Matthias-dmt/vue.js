@@ -25,7 +25,10 @@
           class="mt-7 py-2 bg-gray-200 rounded-xl shadow-lg w-full lg:w-3/4 xl:w-2/4"
         />
 
-        <small v-show="error !== ''" class="italic underline text-red-600">
+        <small
+          v-show="error !== ''"
+          class="block italic underline text-red-600"
+        >
           {{ error }}
         </small>
 
