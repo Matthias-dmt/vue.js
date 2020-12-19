@@ -24,6 +24,7 @@ import Usages from "./Usages";
 import Github from "./button/Github";
 import Discord from "./button/Discord";
 
+
 export default {
   name: "UsageSection",
   components: {

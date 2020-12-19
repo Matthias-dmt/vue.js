@@ -4,7 +4,7 @@
     <transition-group
       name="usage"
       tag="div"
-      class="flex flex-wrap justify-between"
+      class="flex flex-wrap justify-between items-baseline"
     >
       <article
         v-scroll:#target="onScroll"
@@ -36,10 +36,11 @@ export default {
     usages,
     offsetTop: 0,
   }),
-  //   methods: {
-  //     onScroll(e) {
-  //       this.offsetTop = e.target.scrollTop;
-  //     },
-  //   },
+  computed: {
+    scrollPos: () => {
+      const el = document.querySelector("body");
+      return el.scrollTop;
+    },
+  },
 };
 </script>
