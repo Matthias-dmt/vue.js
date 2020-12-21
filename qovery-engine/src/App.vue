@@ -6,9 +6,9 @@
         <Intro></Intro>
       </div>
     </header>
-    <main class="w-4/5 mx-auto text-center py-16">
-      <Work :class="style.section"></Work>
-      <usage-section :class="style.section"></usage-section>
+    <main class="w-4/5 mx-auto text-center py-16 xl:w-3/5">
+      <Work class="section"></Work>
+      <UsageSection class="section"></UsageSection>
     </main>
     <footer class="h-20 bg-gray-900"></footer>
   </div>
@@ -25,10 +25,5 @@ export default {
     Work,
     UsageSection,
   },
-  data: () => ({
-    style: {
-      section: "mb-8",
-    },
-  }),
 };
 </script>

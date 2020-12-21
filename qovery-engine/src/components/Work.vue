@@ -8,7 +8,7 @@
       Docker to manage resources
     </p>
 
-    <img :src="work" alt="how does it work" />
+    <img :src="work" alt="how does it work" class="mx-auto mt-8" />
   </section>
 </template>
 

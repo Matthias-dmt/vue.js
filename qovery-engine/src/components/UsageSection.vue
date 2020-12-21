@@ -1,16 +1,20 @@
 <template>
   <section class="relative">
     <Title title="Usage" class="relative z-10" />
-    <p class="relative z-10 text-sm mb-24 text-gray-700">
+    <p class="relative z-10 text-sm mb-24 text-gray-700 xl:mb-24">
       Initialize EKS (AWS Kubernetes) and ECR (AWS container registry) on AWS
     </p>
-    {{ $el }}
+
     <code-usage class="mb-8"></code-usage>
-    <div class="relative z-10 flex justify-around md:w-2/4 mx-auto">
+    <div class="relative z-10 flex justify-around md:w-2/4 mx-auto ">
       <Github :class="style.button" />
       <Discord :class="style.button" />
     </div>
-    <img :src="bg" alt="bg" class="absolute top-0" />
+    <img
+      :src="bg"
+      alt="bg"
+      class="absolute object-cover top-0 w-full xl:-top-16"
+    />
     <usages></usages>
   </section>
 </template>
@@ -23,7 +27,6 @@ import CodeUsage from "./CodeUsage";
 import Usages from "./Usages";
 import Github from "./button/Github";
 import Discord from "./button/Discord";
-
 
 export default {
   name: "UsageSection",

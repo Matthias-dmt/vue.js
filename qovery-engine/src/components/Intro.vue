@@ -1,6 +1,6 @@
 <template>
   <div class="text-white md:flex">
-    <div class="mb-8 md:p-12 md:pl-0 lg:p-24 lg:pl-0">
+    <div class="mb-8 md:p-12 md:pl-0 lg:p-24 lg:pl-0 xl:px-60 xl:pl-0">
       <div>
         <h1 class="text-4xl font-semibold my-4">Qovery Engine</h1>
       </div>
